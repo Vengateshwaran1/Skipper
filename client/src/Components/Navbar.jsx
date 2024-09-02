@@ -40,11 +40,11 @@ const Navbar = () => {
       };
 
   return (
-    <div className='fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-md z-50'>
-        <div className='max-w-[1300px] mx-auto  flex justify-between text-white
-        text-xl items-center px-12 h-20'>
-
-            <img src={logo} alt="" className='w-60 h-42 p-2 cursor-pointer ' onClick={handleHomeClick}/>
+    <div className='fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-50'>
+        <div className='max-w-[1300px] mx-auto flex justify-between text-gray-200 text-xl items-center px-8 h-20'>
+            <div className=''>
+                <img src={logo} alt="" className='w-60 h-42 p-3 cursor-pointer mt-5' onClick={handleHomeClick}/>
+            </div>
 
             <ul className='hidden md:flex gap-12 z-10 cursor-pointer'>
                 <li><Link to="portfolio" smooth={true} offset={50} duration={500} className='hover:text-primary1'>Products</Link></li>
@@ -60,7 +60,7 @@ const Navbar = () => {
             initial={false}
             animate={nav ? 'open' : 'closed'}
             variants={menuVariants}
-            className='fixed left-0 top-0 w-[40%] min-h-screen bg-black z-40 backdrop-blur-[3px] opacity-90 '
+            className='fixed left-0 top-0 w-[40%] min-h-screen bg-primary backdrop-blur-[3px] opacity-70 z-30'
             >
                 <ul className='font-semibold text-4xl space-y-8 mt-24 text-center cursor-pointer'>
                     <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500} className='hover:text-primary1'>Products</Link></li>
