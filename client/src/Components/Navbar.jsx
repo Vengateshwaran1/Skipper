@@ -40,7 +40,7 @@ const Navbar = () => {
       };
 
   return (
-    <div className='fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-50'>
+    <div className='fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-30'>
         <div className='max-w-[1300px] mx-auto flex justify-between text-primary text-xl items-center px-8 h-20 font-semibold'>
             <div className=''>
                 <img src={logo} alt="" className='w-60 h-42 p-3 cursor-pointer mt-5' onClick={handleHomeClick}/>
@@ -63,13 +63,13 @@ const Navbar = () => {
             initial={false}
             animate={nav ? 'open' : 'closed'}
             variants={menuVariants}
-            className='fixed left-0 top-0 w-[50%] min-h-screen bg-white backdrop-blur-[10px] opacity-80 z-30'
+            className='fixed left-0 top-0 w-[50%] min-h-screen bg-primary1 backdrop-blur-[5px] z-30 p-2 border-r border-r-primary bg-opacity-25'
             >
-                <ul className='font-semibold text-4xl space-y-8 mt-24 text-center cursor-pointer'>
+                <ul className='font-semibold text-2xl space-y-8 mt-24 text-center cursor-pointer'>
                     <li><Link to="products" onClick={closeNav} smooth={true} offset={50} duration={500} className='hover:font-bold'>Products</Link></li>
                     <li><Link to="contact" onClick={closeNav} smooth={true} offset={50} duration={500} className='hover:font-bold'>Contact</Link></li>
                     <li><Link to="about" onClick={closeNav} smooth={true} offset={50} duration={500} className='hover:font-bold'>About</Link></li>
-                    <li><Link to="login" smooth={true} offset={50} duration={500} className='hover:font-bold'>Login/Signup</Link></li>
+                    <li><Link to="login" onClick={closeNav} smooth={true} offset={50} duration={500} className='hover:font-bold'>Login</Link></li>
                 </ul>
             </motion.div>
         </div>
